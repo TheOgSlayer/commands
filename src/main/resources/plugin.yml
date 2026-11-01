@@ -1,0 +1,21 @@
+name: JalebiCommands
+main: dev.jalebi.commands.JalebiCommands
+version: ${project.version}
+api-version: "1.13"
+author: Jalebi
+description: Whitelist which commands players can use and tab complete.
+
+commands:
+  jalebicommands:
+    description: Manage the allowed command list.
+    usage: /<command> <reload|list|add|remove> [command]
+    aliases: [jc]
+    permission: jalebicommands.admin
+
+permissions:
+  jalebicommands.admin:
+    description: Allows managing Jalebi Commands.
+    default: op
+  jalebicommands.bypass:
+    description: Bypass the command whitelist (ops always bypass).
+    default: false

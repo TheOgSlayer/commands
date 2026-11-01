@@ -1,0 +1,41 @@
+# ============================================================
+#  Jalebi Commands
+#  Controls which commands normal players can use / tab complete.
+#  Operators (OPs) are never restricted.
+#  (Players with the permission jalebicommands.bypass are not
+#  restricted either.)
+# ============================================================
+
+# Message shown when a player types a command that is not allowed.
+# Supports & colour codes.
+invalid-command-message: "&cInvalid command."
+
+# If true, aliases of an allowed command are allowed too.
+# e.g. allowing "msg" also allows "tell" and "w".
+include-aliases: true
+
+# If true, ONLY the commands in allowed-commands can be used.
+# If false, every command is allowed except the blacklisted ones.
+whitelist-enabled: true
+
+# Command names WITHOUT the slash.
+allowed-commands:
+  - help
+  - spawn
+  - msg
+  - tpa
+  - tpaccept
+  - tpdeny
+  - home
+  - sethome
+
+# BLACKLIST: these commands never show up in tab complete and
+# always say "Invalid command" for normal players.
+# The blacklist beats the allowed list, and it also covers aliases
+# and namespaced versions (e.g. blacklisting "op" blocks "minecraft:op").
+blacklisted-commands:
+  - plugins
+  - pl
+  - version
+  - ver
+  - about
